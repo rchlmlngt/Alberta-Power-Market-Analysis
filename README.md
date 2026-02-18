@@ -22,7 +22,7 @@ Analysis of historical price and demand patterns to understand market dynamics.
 Time series forecasting model to predict electricity demand patterns.
 
 **Approach:**
-- Model: SARIMAX model with and without exogenous variables
+- Model: SARIMAX model with and without exogenous variables, XGBoost
 - Validation: Train/test split on historical data
 
 *Work in progress - analysis ongoing*
