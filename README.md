@@ -22,8 +22,8 @@ Analysis of historical price and demand patterns to understand market dynamics.
 **Key Findings:**
 - Hourly demand shows consistent daily patterns with morning (6-8 AM) and evening (5-6 PM) peaks during weekdays
 - Seasonal variation driven by heating/cooling demand - peaks in winter and summer months
-- Higher demand does not always result in higher prices dues to merit order market structure
-- Inverse relationship between pool price and wind generation, wind generation has near zero marginal cost
+- Higher demand does not always result in higher prices due to the merit order market structure
+- Inverse relationship between pool price and renewable generation, as renewable generation has a near-zero marginal cost
 
 ## Section 2: Demand Forecasting
 Time series forecasting model to predict electricity demand patterns.
