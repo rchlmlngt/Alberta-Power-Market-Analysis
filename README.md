@@ -30,8 +30,8 @@ Historical price and demand patterns interpreted against market structure
 
 <table>
   <tr>
-    <td><img src="img.png" width="100%"></td>
-    <td><img src="img_1.png" width="100%"></td>
+    <td><img src="img/img.png" width="100%"></td>
+    <td><img src="img/img_1.png" width="100%"></td>
   </tr>
 </table>
 
@@ -49,7 +49,7 @@ Historical price and demand patterns interpreted against market structure
 ### Price
 
 <p align="center">
-  <img src="img_2.png" width="600">
+  <img src="img/img_2.png" width="600">
 </p>
 
 - Average hourly prices fell sharply from 2023 into 2024–2026, driven by lower natural gas prices 
@@ -61,7 +61,7 @@ Historical price and demand patterns interpreted against market structure
 ### Price-Demand Relationship
 
 <p align="center">
-  <img src="img_3.png" width="1000">
+  <img src="img/img_3.png" width="1000">
 </p>
 
 The price-demand scatter plots reveal a marginally positive relationship, though the near-flat slopes suggest almost no linear dependence between the two variables. 
