@@ -35,16 +35,11 @@ Historical price and demand patterns interpreted against market structure
   </tr>
 </table>
 
-- Hourly demand shows a consistent daily shape. Demand ramps sharply out of the early morning trough, 
- climbs steadily through the day to a peak around hour 18, then declines overnight.
-- Weekday demand is tightly clustered, sitting at similar volumes, while weekends drop noticeably 
- but follow the same daily shape.
 - Residential and commercial consumption drive these observed patterns; however, 
  Alberta's production of oil and gas introduces a substantial baseload component, 
  as oil sands extraction requires continuous electricity regardless of time of day.
-- Seasonal variation driven by heating/cooling demand - peaks in winter and summer months
 - Annual demand peaks in winter (Dec–Feb) and summer (Jul–Aug) on heating/cooling load, 
-- and bottoms out in the milder shoulder months (typically May and September).
+and bottoms out in the milder shoulder months (typically May and September).
 
 ### Price
 
@@ -55,8 +50,7 @@ Historical price and demand patterns interpreted against market structure
 - Average hourly prices fell sharply from 2023 into 2024–2026, driven by lower natural gas prices 
  and new gas-fired and renewable capacity entering the grid.
 - Natural gas now sets the price level, since gas fired generators are typically the marginal units in the merit order.
-- Prices show a small morning peak around hours 7 to 9, soften through the middle of the day, 
- then ramp up to a strong evening peak. This evening peak holds late, with prices staying elevated even as demand declines.
+- The evening peak holds late, with prices staying elevated even as demand declines.
 
 ### Price-Demand Relationship
 
@@ -68,15 +62,12 @@ The price-demand scatter plots reveal a marginally positive relationship, though
 The distribution of the observations is heavily concentrated at the lower price levels indicating that for most hours the market is generally well-behaved with some hours settling at the `0/MWh` floor 
 , but with isolated hours, where prices drift from the norm even reaching the regulatory price cap of `999.99/MWh`.
 
-This pattern is expected given Alberta's merit order market structure, where generator bids are sorted from least to most expensive, 
-dispatched sequentially until demand is met, and the marginal generator sets the price. As a result, prices depend on the available supply stack rather than demand. 
+This pattern is expected given Alberta's merit order market structure. As a result, prices depend on the available supply stack rather than demand. 
 Extreme price events are more likely attributed to supply-side shocks such as unplanned outages, constrained generation capacity or congestion on the power line than to demand alone.
 
 The continuous addition of renewable generators adds further complexity to Alberta's price formation. 
-Since renewable generation carries near-zero marginal cost, these units are dispatched first in the merit order when available, 
-displacing higher-cost natural gas generators and suppressing the pool price. This reinforces the earlier observation that higher demand does not always translate to higher prices when 
-renewables are present on the grid — an hour of high renewable output coinciding with strong demand can yield lower prices, while an hour dominated by expensive marginal units 
-under weak demand can produce elevated prices.
+An hour of high renewable output coinciding with strong demand can yield lower prices, while an hour dominated by expensive marginal units 
+with weak demand can produce elevated prices.
 
 ## Section 2: Detecting outliers
 ** Defining spikes**
