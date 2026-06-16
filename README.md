@@ -30,8 +30,8 @@ Historical price and demand patterns interpreted against market structure
 
 <table>
   <tr>
-    <td><img src="img/img.png" width="100%"></td>
-    <td><img src="img/img_1.png" width="100%"></td>
+    <td><img src="img/img.png" width="120%"></td>
+    <td><img src="img/img_1.png" width="120%"></td>
   </tr>
 </table>
 
