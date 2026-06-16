@@ -102,7 +102,7 @@ The rolling median and MAD are computed in DuckDB and independently reproduced i
 
 ### Results
 
-Looking at hour ending 18:00, the flagged hours (gold) sit where the price breaks sharply from its rolling base.
+Looking at hour ending 18:00, the flagged hours (gold) sit where the price breaks sharply from its rolling baseline.
 Notably, the largest raw spikes in 2023 are mostly not flagged. With the baseline being elevated, another high
 print is not a departure. Between 2024 and 2026, smaller excursions are flagged because they stand out
 against a quiet baseline; the detector measures distance from recent normal, not absolute price.
