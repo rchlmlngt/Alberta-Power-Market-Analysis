@@ -130,7 +130,7 @@ but isolating them is a different question than the one this detector answers.
 
 
 ## Section 3: Demand Forecasting
-Writu - up coming soon
+Write-up coming soon
 ### SARIMA Model
 
 ### XGBoost Model
