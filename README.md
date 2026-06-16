@@ -30,8 +30,8 @@ Historical price and demand patterns interpreted against market structure
 
 <table>
   <tr>
-    <td><img src="img/img.png" width="100%"></td>
-    <td><img src="img/img_1.png" width="100%"></td>
+    <td><img src="img/img.png" width="120%"></td>
+    <td><img src="img/img_1.png" width="120%"></td>
   </tr>
 </table>
 
@@ -92,17 +92,19 @@ $$
 The score is a relative, per-hour ranking, not a calibrated magnitude: a higher score means a more pronounced departure from the hour's recent normal. 
 The window length balances two needs: long enough for a stable baseline, short enough to track the substantial shifts in price level over time rather than lag them.
 
-The rolling median and MAD are computed in DuckDB and independently reproduced in pandas, matching exactly.
-
-(Full construction, formulas, and verification in detecting_outliers.ipynb.)
-
 <p align="center">
   <img src="img/img_4.png" width="800">
 </p>
 
+The rolling median and MAD are computed in DuckDB and independently reproduced in pandas, matching exactly.
+
+(Full construction, formulas, and verification in detecting_outliers.ipynb.)
+
+
+
 ### Results
 
-Looking at hour ending 18:00, the flagged hours (gold) sit where the price breaks sharply from its rolling base.
+Looking at hour ending 18:00, the flagged hours (gold) sit where the price breaks sharply from its rolling baseline.
 Notably, the largest raw spikes in 2023 are mostly not flagged. With the baseline being elevated, another high
 print is not a departure. Between 2024 and 2026, smaller excursions are flagged because they stand out
 against a quiet baseline; the detector measures distance from recent normal, not absolute price.
