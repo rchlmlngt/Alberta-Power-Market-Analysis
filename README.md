@@ -92,13 +92,15 @@ $$
 The score is a relative, per-hour ranking, not a calibrated magnitude: a higher score means a more pronounced departure from the hour's recent normal. 
 The window length balances two needs: long enough for a stable baseline, short enough to track the substantial shifts in price level over time rather than lag them.
 
+<p align="center">
+  <img src="img/img_4.png" width="800">
+</p>
+
 The rolling median and MAD are computed in DuckDB and independently reproduced in pandas, matching exactly.
 
 (Full construction, formulas, and verification in detecting_outliers.ipynb.)
 
-<p align="center">
-  <img src="img/img_4.png" width="800">
-</p>
+
 
 ### Results
 
