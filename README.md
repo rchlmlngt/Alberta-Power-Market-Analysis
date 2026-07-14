@@ -130,7 +130,7 @@ but isolating them is a different question than the one this detector answers.
 
 
 ## Section 3: Demand Forecasting
-
+Write-up coming soon
 ### SARIMA Model
 
 A traditional statistical forecast was done to start with; however the SARIMA model can only capture a single seasonal 
