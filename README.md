@@ -133,4 +133,13 @@ but isolating them is a different question than the one this detector answers.
 
 ### SARIMA Model
 
+A traditional statistical forecast was done to start with; however the SARIMA model can only capture a single seasonal 
+cycle. The Alberta internal load carries strong seasonality at daily, weekly, and annual scales, so fitting the 
+model made this limitation apparent quickly.
+
+The effort was not wasted though, for working through the SARIMA specification confirmed how strongly structured the demand series 
+is, and made clear that the next model to implement should handle several seasonal patterns simultaneously which
+motivated the move to a gradient boosted approach.
+
+
 ### XGBoost Model
