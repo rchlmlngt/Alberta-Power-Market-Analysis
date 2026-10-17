@@ -6,7 +6,7 @@ and using this understanding to develop models.
 
 ### Actual Forecast Data
 - **Source**: Alberta Electric System Operator (AESO)
-- **Period**: January 01, 2023 - Last updated on June 08, 2026
+- **Period**: January 01, 2023 - Last updated on September 23, 2026
 - **Granularity**: Hourly
 - **Columns**: date_he, forecast_price, actual_price, forecast_ail, actual_ail, ail_difference
 
@@ -110,14 +110,14 @@ print is not a departure. Between 2024 and 2026, smaller excursions are flagged 
 against a quiet baseline; the detector measures distance from recent normal, not absolute price.
 
 <p align="center">
-  <img src="img/img_6.png" width="800">
+  <img src="img/img_5.png" width="800">
 </p>
 
 
 Grouping the flagged hours by rate across month, day of week, and hour of day, we get
 
 <p align="center">
-  <img src="img/img_5.png" width="800">
+  <img src="img/img_6.png" width="800">
 </p>
 
 The hour-of-day has a similar shape to the hourly price by hour curve from section 1, where anomalies
@@ -143,3 +143,28 @@ motivated the move to a gradient boosted approach.
 
 
 ### XGBoost Model
+
+XGBoost is a tree-based model. It is more flexible than a traditional statistical model like SARIMA, 
+so it can capture several seasonal patterns (daily, weekly and annual) at once. The trade-off is interpretability: 
+there are no coefficients to read off, so I used feature importance to understand what drives the predictions.
+
+For features, I kept to simple calendar variables (hour of day, day of week, month) because demand follows 
+such a strong seasonal pattern that these are enough to capture it. I also added autoregressive features: 
+demand 1 hour, 24 hours and 168 hours (one week) earlier.
+
+Evaluating the model showed that the previous hour’s demand is by far the most important feature: 
+shuffling it movess RMSE by about 900 MW. This is expected, since demand moves gradually from hour to hour. 
+The previous hour also carries information the calendar features can’t, such as the effect of weather. 
+Temperature is a major driver of demand, and although the model doesn’t use weather data directly, its effect is 
+already reflected in the previous hour’s load.
+
+Because the model learns only from history, it struggles with conditions it has rarely or never seen. 
+Demand above 12,000 MW occurs in only about 1% of hours, so the model has few examples to learn from, 
+and tree-based models cannot predict beyond the range of values in their training data. Combined with 
+the lack of a temperature input to anticipate cold snaps and heat waves, this is why the largest errors occur at extreme peaks.
+
+<p align="center">
+  <img src="img/img_7.png" width="800">
+  <img src="img/img_8.png" width="800">
+</p>
+
