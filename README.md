@@ -163,7 +163,7 @@ Demand above 12,000 MW occurs in only about 1% of hours, so the model has few ex
 and tree-based models cannot predict beyond the range of values in their training data. Combined with 
 the lack of a temperature input to anticipate cold snaps and heat waves, the largest errors occur at extreme peaks.
 
-The model also makes more errors just before the morning ramp at hour ending 8 and just after the evening cool down at hour ending 7, 
+The model also makes more errors just before the morning ramp at hour ending 8 and just after the evening cool down at hour ending 19, 
 as shown by the higher mean absolute error at those hours. This is expected since demand changes fastest at these times, so the previous hour’s value, the model’s most important feature, 
 is a weaker guide to the next hour than it is during the steadier overnight and midday periods.
 <p align="center">
@@ -172,7 +172,7 @@ is a weaker guide to the next hour than it is during the steadier overnight and 
 </p>
 
 To check how the model performs on new data, the final model was trained on the last two years up to June 8, 2026,
-and then tested from June 9 to October 16. Each forecast is one hour ahead using actual demand from the previous hour.
+and then tested from June 9 to October 16. Each forecast is one hour ahead, using actual demand from the previous hour.
 Forecasting further ahead would require more information, most obviously temperature, since weather is a major driver of demand.
 <p align="center">
   <img src="img/img_9.png" width="800">
