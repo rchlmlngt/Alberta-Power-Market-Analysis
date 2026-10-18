@@ -6,7 +6,7 @@ and using this understanding to develop models.
 
 ### Actual Forecast Data
 - **Source**: Alberta Electric System Operator (AESO)
-- **Period**: January 01, 2023 - Last updated on October 16 2026
+- **Period**: January 01, 2023 - Last updated on October 16, 2026
 - **Granularity**: Hourly
 - **Columns**: date_he, forecast_price, actual_price, forecast_ail, actual_ail, ail_difference
 
