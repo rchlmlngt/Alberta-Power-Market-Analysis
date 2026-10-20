@@ -10,6 +10,12 @@ and using this understanding to develop models.
 - **Granularity**: Hourly
 - **Columns**: date_he, forecast_price, actual_price, forecast_ail, actual_ail, ail_difference
 
+### Supply Data, Historical CSD 
+- **Source**: Alberta Electric System Operator (AESO)
+- **Period**: January 01, 2023 - June 30, 2026
+- **Granularity**: Hourly
+- **Columns**: date_mpt_he, asset_short_name, volume, max_capability, fuel_type, sub_fuel_type
+
 ### Market Context
 - Alberta's wholesale electricity market runs on a merit order structure where generator bids are sorted
  from least to most expensive and dispatched until demand is met, with the 
