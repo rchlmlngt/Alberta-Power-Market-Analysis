@@ -5,9 +5,9 @@ identifying trends and relationships that are in line with the market's underlyi
 and using this understanding to develop models.
 
 ### TL;DR
-- **Price is supply-driven, not demand-driven.** Price and demand barely correlate.
+- **Price is not demand-driven.** Price and demand barely correlate.
 - **Prices fell sharply after 2023** on cheaper gas and new capacity; renewables suppress prices when output is high.
-- **Price anomalies cluster at the evening peak**: weekdays flag at 5–7% vs ~3% on weekends, and November is highest.
+- **Price outliers cluster at the evening peak**: weekdays flag at 5–7% vs ~3% on weekends, and are most frequent in November.
 - **XGBoost forecasts demand one hour ahead with an RMSE of 75 MW** on a June–Oct 2026 holdout, 57% better than a persistence baseline (175 MW). 
 In backtesting, the largest errors came at rare extreme peaks (>12,000 MW), where the model has no temperature input.
 
